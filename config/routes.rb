@@ -6,14 +6,16 @@ Rails.application.routes.draw do
 
   get 'modules/about'
 
-  get 'pages/home'
+  #get 'pages/home'
 
-  get 'pages/about'
+  get 'about', to: 'pages/about'
 
   get 'modulos/index', to:'modulo#index'
 
   resources :articles
 
+
+  root  'pages#home'
   
 
   # The priority is based upon order of creation: first created -> highest priority.
